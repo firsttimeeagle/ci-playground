@@ -1,0 +1,24 @@
+name: CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run unit tests
+        run: echo "Running unit tests"
+      
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build artifact
+        run: echo "Building artifact"
