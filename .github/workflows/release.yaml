@@ -1,0 +1,16 @@
+name: CI/CD Workflow
+
+on:
+  release:
+    types:
+      - "prereleased"
+
+jobs:
+  deploy:
+    name: Build & deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Build docker image
+      run: echo "docker build ..."
+    - name: Deploy to staging
+      run: echo "Deploying to staging server ..."
